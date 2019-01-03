@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Magic 8 ball</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+
+<body>
+  <div class="page1 page">
+    <p>What is your name?</p>
+    <input type="text" id="name">
+    <button onclick="getName()">Submit</button>
+  </div>
+  <div class="whitePage page">
+  </div>
+  <div class="page2 page">
+    <p>What is your question?</p>
+    <input type="text" id="question">
+    <button onclick="getQuestion()">Submit</button>
+  </div>
+  <div class="page3 page">
+    <p></p>
+    <section class="stage">
+      <figure class="ball">
+        <span class="shadow"></span>
+        <div class="whiteCirc">
+    <span class="eight">8</span>
+      </div>
+      <div class="blackcirc">
+        <div class="triangle">
+          <span class="fortune">I am a fortune.</span>
+
+    </div>
+        </div>
+      </figure>
+    </section>
+
+    <button type="button" name="shakeagain" id="shakeagain">Shake Again</button>
+    <button type="button" name="startover" id="startover">Start Over</button>
+  </div>
+  <div class="tryAgain page">
+    <p>hmmm... try again.</p>
+  </div>
+
+</body>
+<script src="script.js" charset="utf-8"></script>
+
+</html>
