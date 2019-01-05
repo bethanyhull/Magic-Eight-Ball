@@ -1,7 +1,7 @@
   var userName = document.getElementById("name").value;
   var userQuestion = document.getElementById("question").value;
 
-//CODE FOR THE SUBMIT BUTTON ON THE NAME SCREEN
+  //CODE FOR THE SUBMIT BUTTON ON THE NAME SCREEN
   function getName() {
     var userName = document.getElementById("name").value;
     document.querySelector(".page2 p").innerHTML = `Hello ${userName}. Please type a yes or no question.`;
@@ -16,14 +16,14 @@
     }
   };
 
-//REMOVE CLASS ON ERROR PAGE SO IT CAN PLAY AGAIN
+  //REMOVE CLASS ON ERROR PAGE SO IT CAN PLAY AGAIN
   function removeErrorPage() {
     document.querySelector('.tryAgain').classList.remove('errorpage');
   };
 
   document.querySelector('.tryAgain').addEventListener("webkitAnimationEnd", removeErrorPage);
 
-//CODE FOR SUBMIT BUTTON ON THE QUESTION PAGE
+  //CODE FOR SUBMIT BUTTON ON THE QUESTION PAGE
   function getQuestion() {
     var userQuestion = document.getElementById("question").value;
     var userName = document.getElementById("name").value;
@@ -42,15 +42,59 @@
     }
   };
 
+  //REMOVE SHAKE CLASS ON BALL SO IT CAN PLAY AGAIN
+  function removeShake() {
+    document.querySelector('.ball').classList.remove('shake');
+  };
+
+  document.querySelector('.ball').addEventListener("webkitAnimationEnd", removeShake);
+
+
+
+  function fortune() {
+    //magic 8 ball fortune
+    var randomNumber = Math.floor(Math.random() * 10);
+    var fortuneText = document.querySelector('.fortune');
+    
+    switch (randomNumber) {
+      case 0:
+        fortuneText.innerHTML = 'yes';
+        break;
+      case 1:
+        fortuneText.innerHTML = 'yes';
+        break;
+      case 2:
+        fortuneText.innerHTML = 'yes';
+        break;
+      case 3:
+        fortuneText.innerHTML = 'yes';
+        break;
+      case 4:
+        fortuneText.innerHTML = 'maybe';
+        break;
+      case 5:
+        fortuneText.innerHTML = 'maybe';
+        break;
+      case 6:
+        fortuneText.innerHTML = 'maybe';
+        break;
+      case 7:
+        fortuneText.innerHTML = 'no';
+        break;
+      case 8:
+        fortuneText.innerHTML = 'no';
+        break;
+      case 9:
+        fortuneText.innerHTML = 'no';
+        break;
+      default:
+        fortuneText.innerHTML = 'try again later';
+    }
+  };
+
   function magic8() {
     document.querySelector('.ball').classList.add('shake');
     document.querySelector('.whiteCirc').style.opacity = 0;
+    fortune();
 
   };
-
-  //REMOVE SHAKE CLASS ON BALL SO IT CAN PLAY AGAIN
-    function removeShake() {
-      document.querySelector('.ball').classList.remove('shake');
-    };
-
-    document.querySelector('.ball').addEventListener("webkitAnimationEnd", removeShake);
