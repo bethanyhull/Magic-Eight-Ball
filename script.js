@@ -55,7 +55,7 @@
     //magic 8 ball fortune
     var randomNumber = Math.floor(Math.random() * 10);
     var fortuneText = document.querySelector('.fortune');
-    
+
     switch (randomNumber) {
       case 0:
         fortuneText.innerHTML = 'yes';
@@ -85,10 +85,10 @@
         fortuneText.innerHTML = 'no';
         break;
       case 9:
-        fortuneText.innerHTML = 'no';
+        fortuneText.innerHTML = `That's a stupid question.`;
         break;
       default:
-        fortuneText.innerHTML = 'try again later';
+        fortuneText.innerHTML = `try again later`;
     }
   };
 
@@ -96,5 +96,22 @@
     document.querySelector('.ball').classList.add('shake');
     document.querySelector('.whiteCirc').style.opacity = 0;
     fortune();
+  };
 
+function whiteCircFade () {
+  document.querySelector('.whiteCirc').style.transition = 'opacity 1s linear';
+  document.querySelector('.whiteCirc').style.opacity = 0;
+  fortune();
+};
+
+  function shakeAgain() {
+    document.querySelector(".page3 p").innerHTML = `Not a fan of your answer? Let's try again...`;
+    document.querySelector('.whiteCirc').style.transition = 'opacity 1s linear';
+    document.querySelector('.whiteCirc').style.opacity = 1;
+    document.querySelector('.ball').classList.add('shake');
+    document.querySelector('.ball').addEventListener("webkitAnimationEnd", whiteCircFade);
+  };
+
+  function startOver () {
+    window.location.reload(true);
   };
