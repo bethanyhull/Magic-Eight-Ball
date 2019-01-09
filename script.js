@@ -53,40 +53,48 @@
 
   function fortune() {
     //magic 8 ball fortune
-    var randomNumber = Math.floor(Math.random() * 10);
+    var randomNumber = Math.floor(Math.random() * 13);
     var fortuneText = document.querySelector('.fortune');
 
     switch (randomNumber) {
       case 0:
-        fortuneText.innerHTML = 'yes';
+        fortuneText.innerHTML = `seek professional help`;
         break;
       case 1:
-        fortuneText.innerHTML = 'yes';
+        fortuneText.innerHTML = `that's a stupid question`;
         break;
       case 2:
-        fortuneText.innerHTML = 'yes';
+        fortuneText.innerHTML = `ask your father`;
         break;
       case 3:
-        fortuneText.innerHTML = 'yes';
+        fortuneText.innerHTML = `signs point to yes`;
         break;
       case 4:
-        fortuneText.innerHTML = 'maybe';
+        fortuneText.innerHTML = 'it is certain';
         break;
       case 5:
-        fortuneText.innerHTML = 'maybe';
+        fortuneText.innerHTML = 'very doubtful';
         break;
       case 6:
-        fortuneText.innerHTML = 'maybe';
+        fortuneText.innerHTML = 'outlook good';
         break;
       case 7:
-        fortuneText.innerHTML = 'no';
+        fortuneText.innerHTML = 'my sources say no';
         break;
       case 8:
-        fortuneText.innerHTML = 'no';
+        fortuneText.innerHTML = 'outlook not so good';
         break;
       case 9:
-        fortuneText.innerHTML = `That's a stupid question.`;
+        fortuneText.innerHTML = `That's a stupid question`;
         break;
+        case 10:
+          fortuneText.innerHTML = `better not tell you now`;
+          break;
+          case 11:
+            fortuneText.innerHTML = `don't count on it`;
+            case 12:
+              fortuneText.innerHTML = `definitely`;
+            break;
       default:
         fortuneText.innerHTML = `try again later`;
     }
